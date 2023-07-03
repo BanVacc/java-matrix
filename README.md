@@ -32,7 +32,7 @@
 \end{bmatrix}
     \cdot
 \begin{bmatrix}
-    4 & -2 & 1
+    4 & -2 & -1
 \end{bmatrix}
 =
 (1 \cdot 4) + (3 \cdot -2) + (-5 \cdot -1)
