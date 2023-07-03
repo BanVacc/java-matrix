@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.MainForm">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="7" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="92" width="812" height="484"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="45429" class="javax.swing.JTable" binding="tableA">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="140"/>
+          </grid>
+        </constraints>
+        <properties>
+          <dropMode value="ON"/>
+          <updateSelectionOnSort value="false"/>
+          <verifyInputWhenFocusTarget value="true"/>
+        </properties>
+        <clientProperties>
+          <terminateEditOnFocusLost class="java.lang.Boolean" value="true"/>
+        </clientProperties>
+      </component>
+      <component id="32e3f" class="javax.swing.JTable" binding="tableC">
+        <constraints>
+          <grid row="1" column="6" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="119" height="140"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="3cc9d" class="javax.swing.JTextField" binding="matrixARows">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="107" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="150de" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="X"/>
+        </properties>
+      </component>
+      <component id="97400" class="javax.swing.JTextField" binding="matrixACols">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="21b1" class="javax.swing.JButton" binding="matrixAInit">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Применить"/>
+        </properties>
+      </component>
+      <component id="aa3e9" class="javax.swing.JComboBox" binding="operationType">
+        <constraints>
+          <grid row="1" column="4" row-span="4" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="65" height="140"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="cross"/>
+            <item value="dot"/>
+            <item value="prod"/>
+          </model>
+        </properties>
+      </component>
+      <component id="87648" class="javax.swing.JLabel" binding="operationLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="65" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Операция"/>
+        </properties>
+      </component>
+      <component id="c4ae4" class="javax.swing.JLabel" binding="matrixALabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Матрица A"/>
+        </properties>
+      </component>
+      <component id="94ea8" class="javax.swing.JLabel" binding="matrixCLabel">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="119" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Результат Матрица C"/>
+        </properties>
+      </component>
+      <component id="57a8d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="5" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="="/>
+        </properties>
+      </component>
+      <component id="6965b" class="javax.swing.JTable" binding="tableB">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="140"/>
+          </grid>
+        </constraints>
+        <properties>
+          <dropMode value="INSERT"/>
+        </properties>
+        <clientProperties>
+          <JTable.autoStartsEdit class="java.lang.Boolean" value="false"/>
+          <terminateEditOnFocusLost class="java.lang.Boolean" value="true"/>
+        </clientProperties>
+      </component>
+      <component id="197e5" class="javax.swing.JTextField" binding="matrixBRows">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="dd239" class="javax.swing.JTextField" binding="matrixBCols">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="1"/>
+        </properties>
+      </component>
+      <component id="c1d2f" class="javax.swing.JButton" binding="matrixBInit">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Применить"/>
+        </properties>
+      </component>
+      <component id="d4047" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="X"/>
+        </properties>
+      </component>
+      <component id="471f3" class="javax.swing.JButton" binding="operationButton">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="65" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Расчитать"/>
+        </properties>
+      </component>
+      <component id="cf3e2" class="javax.swing.JLabel" binding="matrixBLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Матрица B"/>
+        </properties>
+      </component>
+      <component id="e70ff" class="javax.swing.JLabel" binding="matrixCDimsLabel">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="119" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="25e30" class="javax.swing.JTextArea" binding="solutionText">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <lineWrap value="true"/>
+          <wrapStyleWord value="true"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
