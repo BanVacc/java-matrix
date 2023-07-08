@@ -193,7 +193,7 @@ public class MainForm extends JFrame {
     public static void main(String[] args) {
         MainForm form = new MainForm();
         form.setContentPane(form.panelMain);
-        form.setTitle("Матрицы!");
+        form.setTitle("Матрицы");
         form.setSize(800, 600);
 
         form.drawMatrix(form.tableC, new Matrix(1, 1));
