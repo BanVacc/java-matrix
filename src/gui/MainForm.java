@@ -31,6 +31,12 @@ public class MainForm extends JFrame {
     private JTextField matrixBCols;
     private JLabel matrixCDimsLabel;
 
+    /**
+     * Отрисовывает матрицу в компонент таблицы
+     *
+     * @param table  компонент таблицы, в которую будет отрисована матрица
+     * @param matrix матрица, которая будет отрисована в таблице
+     */
     void drawMatrix(JTable table, Matrix matrix) {
         table.clearSelection();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
@@ -49,6 +55,14 @@ public class MainForm extends JFrame {
         }
     }
 
+    /**
+     * Считывает размеры матрицы из текстовых полей
+     *
+     * @param rowsTextField текстовое поле с количеством строк
+     * @param colsTextField текстовое поле с количеством столбцов
+     * @return Массив из двух целочисленных элементов [строки, столбцы]
+     * @throws NumberFormatException - если не удалось преобразовать значение поля к числу
+     */
     int[] getMatrixDims(JTextField rowsTextField, JTextField colsTextField) throws NumberFormatException {
         int rows = 0, cols = 0;
         rows = Integer.parseInt(rowsTextField.getText());
@@ -56,12 +70,19 @@ public class MainForm extends JFrame {
         return new int[]{rows, cols};
     }
 
+    /**
+     * Преобразует данные из таблицы в объект матрицы
+     *
+     * @param table компонент таблицы, содержащий данные для преобразования
+     * @return объект матрицы, созданный на основе данных из таблицы
+     * @throws NumberFormatException c указанием строки и столбца
+     *                               если не удалось преобразовать элемент таблицы в число
+     */
     public Matrix parseMatrix(JTable table) throws NumberFormatException {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         Matrix parsed = new Matrix(model.getRowCount(), model.getColumnCount());
 
-        int row = 0;
-        int col = 0;
+        int row = 0, col = 0;
         try {
             for (row = 0; row < parsed.getRowCount(); row++) {
                 for (col = 0; col < parsed.getColumnCount(); col++) {
@@ -175,7 +196,7 @@ public class MainForm extends JFrame {
                     }
                 } catch (InputMismatchException ex) {
                     JOptionPane.showMessageDialog(operationButton, ex.getMessage(),
-                            "Ошибка при выполнении операции", JOptionPane.ERROR_MESSAGE );
+                            "Ошибка при выполнении операции", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 

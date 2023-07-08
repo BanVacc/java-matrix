@@ -1,9 +1,10 @@
 package back;
+
 import java.util.StringJoiner;
 
 public class Matrix {
-    private int rowCount;
-    private int columnCount;
+    private final int rowCount;
+    private final int columnCount;
     private final double[][] element;
 
     public Matrix(int rowCount, int columnCount) {
@@ -18,19 +19,33 @@ public class Matrix {
         }
     }
 
+    /**
+     * Возвращает число строк в матрице
+     *
+     * @return число строк в матрице
+     */
     public int getRowCount() {
         return rowCount;
     }
 
+    /**
+     * Возвращает число столбцов в матрице
+     *
+     * @return число столбцов в матрице
+     */
     public int getColumnCount() {
         return columnCount;
     }
 
-    public double[][] getElement() {
-        return element;
-    }
-
-    public double getElementAt(int row, int col){
+    /**
+     * Возвращает элемент матрицы по указанным индексам
+     *
+     * @param row индекс строки элемента
+     * @param col индекс столбца элемента
+     * @return значение элемента матрицы по указанным индексам
+     * @throws IndexOutOfBoundsException если индексы выходят за пределы размеров матрицы
+     */
+    public double getElementAt(int row, int col) throws IndexOutOfBoundsException {
 
         if (row >= this.rowCount || col >= this.columnCount) {
             throw new IndexOutOfBoundsException("Index out of bounds");
@@ -39,7 +54,15 @@ public class Matrix {
         return element[row][col];
     }
 
-    public void setElementAt(int row, int col, double value) {
+    /**
+     * Устанавливает значение элемента по указанным индексам
+     *
+     * @param row   индекс строки элемента
+     * @param col   индекс столбца элемента
+     * @param value значение, которое будет установлено
+     * @throws IndexOutOfBoundsException если индексы выходят за пределы размеров матрицы
+     */
+    public void setElementAt(int row, int col, double value) throws IndexOutOfBoundsException {
 
         if (row >= this.rowCount || col >= this.columnCount) {
             throw new IndexOutOfBoundsException("Index out of bounds");
@@ -48,6 +71,12 @@ public class Matrix {
         element[row][col] = value;
     }
 
+    /**
+     * Возвращает строковое представление матрицы.
+     *
+     * @return строковое представление матрицы, где каждая строка представлена в отдельной строке,
+     * а элементы разделены пробелами
+     */
     public String toString() {
         StringJoiner rowJoiner = new StringJoiner("\n");
 

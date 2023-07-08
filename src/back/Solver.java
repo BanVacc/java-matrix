@@ -6,19 +6,41 @@ import java.util.StringJoiner;
 
 public class Solver {
 
+    /**
+     * Класс Solution представляет решение, содержащее текст и матрицу.
+     */
     public class Solution {
         String text;
         Matrix matrix;
 
+        /**
+         * Возвращает матрицу, содержащуюся в решении.
+         *
+         * @return матрица в решении
+         */
         public Matrix getMatrix() {
             return matrix;
         }
 
+        /**
+         * Возвращает текст, содержащийся в решении.
+         *
+         * @return текст в решении
+         */
         public String getText() {
             return text;
         }
     }
 
+    /**
+     * Вычисляет скалярное произведение двух векторов размером 1xN.
+     *
+     * @param matrixA первый вектор размером 1xN
+     * @param matrixB второй вектор размером 1xN
+     * @return бъект Solution, содержащий текстовое описание решения и матрицу размером 1x1,
+     * которая представляет скалярное произведение векторов
+     * @throws InputMismatchException если матрицы содержат больше одной строки или размеры матриц не совпадают
+     */
     public Solution calculateDotProduct(Matrix matrixA, Matrix matrixB) throws InputMismatchException {
 
         if (matrixA.getRowCount() > 1 || matrixB.getRowCount() > 1) {
@@ -48,6 +70,15 @@ public class Solver {
         return solution;
     }
 
+    /**
+     * Вычисляет скалярное произведение двух векторов
+     *
+     * @param matrixA первый вектор размером 1x3
+     * @param matrixB второй вектор размером 1x3
+     * @return бъект Solution, содержащий текстовое описание решения и матрицу размером 1x3,
+     * которая представляет вектроное произведение векторов
+     * @throws InputMismatchException если размеры матрицы отличны от 1x3
+     */
     public Solution calculateCrossProduct(Matrix matrixA, Matrix matrixB) throws InputMismatchException {
 
         if (matrixA.getRowCount() > 1 || matrixB.getRowCount() > 1) {
@@ -84,6 +115,15 @@ public class Solver {
         return solution;
     }
 
+    /**
+     * Вычисляет произведение двух матриц.
+     *
+     * @param matrixA первая матрица размером MxK
+     * @param matrixB вторая матрица размером KxN
+     * @return объект Solution, содержащий текстовое описание решения и матрицу размером MxN,
+     * которая представляет произведение двух матриц
+     * @throws InputMismatchException если количество столбцов в матрице A не равно количеству строк в матрице B
+     */
     public Solution calculateProduct(Matrix matrixA, Matrix matrixB) throws InputMismatchException {
         // Перемножение матриц размером (M,K) x (K,N) = (M,N)
 
